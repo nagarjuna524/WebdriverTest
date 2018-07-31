@@ -11,7 +11,7 @@ import edu.framework.helpers.BrowserHelper;
 public class SanityTest extends UIBaseTest {
 
 	
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void testEasy() throws Exception {
 		
 		BrowserHelper browserHelper = new BrowserHelper(SessionManager.getDriver());

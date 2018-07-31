@@ -36,13 +36,21 @@ public class SessionManager {
 		String hostName = configProps.getProperty("hostName");
 		String hostUrl = configProps.getProperty("hostUrl");
 
+		String OSNAME = System.getProperty("os.name").toLowerCase();
+		String path = System.getProperty("user.dir");
+		
+		
 		switch (browserName) {
 
 		case "firefox":
 
+			if (OSNAME.contains("windows")) {
+				System.setProperty("webdriver.gecko.driver", path + "/drivers/windows32/geckodriver.exe");
+			} else {
+				System.setProperty("webdriver.gecko.driver", path + "/drivers/linux32/geckodriver");
+			}
+
 			if (hostName.equals("localhost")) {
-				String path = System.getProperty("user.dir") + "/drivers/geckodriver";
-				System.setProperty("webdriver.gecko.driver", path);
 				driver = new FirefoxDriver();
 				} else if (hostName.equals("supergrid")) {
 				DesiredCapabilities capability = DesiredCapabilities.firefox();
@@ -53,9 +61,13 @@ public class SessionManager {
 
 		case "chrome":
 			
+			if (OSNAME.contains("windows")) {
+				System.setProperty("webdriver.chrome.driver", path + "/drivers/windows32/chromedriver235/chromedriver.exe");
+			} else {
+				System.setProperty("webdriver.chrome.driver", path + "/drivers/linux32/chromedriver");	
+			}
+			
 			if (hostName.equals("localhost")) {
-				String path = System.getProperty("user.dir") + "/drivers/chromedriver";
-				System.setProperty("webdriver.chrome.driver", path);
 				driver = new ChromeDriver();				
 			} else if (hostName.equals("supergrid")) {
 				DesiredCapabilities capability = DesiredCapabilities.chrome();
