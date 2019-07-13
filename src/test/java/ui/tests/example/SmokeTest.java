@@ -1,4 +1,4 @@
-package src.test.java.ui.tests.example;
+package ui.tests.example;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
