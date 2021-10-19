@@ -62,7 +62,7 @@ public class SessionManager {
 		case "chrome":
 			
 			if (OSNAME.contains("windows")) {
-				System.setProperty("webdriver.chrome.driver", path + "/drivers/windows32/chromedriver235/chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", path + "/drivers/windows32/chromedriver.exe");
 			} else {
 				System.setProperty("webdriver.chrome.driver", path + "/drivers/linux32/chromedriver");	
 			}
@@ -140,18 +140,10 @@ public class SessionManager {
 	}
 
 	/**
-	 * 
 	 * Gets the driver instance.
 	 *
-	 * 
-	 * 
 	 * @return driver Return the driver instance if exist
-	 * @throws Exception
-	 * 
-	 * @throws BaseException
-	 * 
-	 *             Driver instance is null
-	 * 
+	 * @throws Exception if Driver instance is null
 	 */
 
 	public static WebDriver getDriver() throws Exception {

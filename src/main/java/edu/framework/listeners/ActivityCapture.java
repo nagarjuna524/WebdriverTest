@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
-public class ActivityCapture implements WebDriverEventListener {
+public abstract class ActivityCapture implements WebDriverEventListener {
 
 	@Override
 	public void afterAlertAccept(WebDriver arg0) {

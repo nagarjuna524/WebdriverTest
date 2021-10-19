@@ -18,7 +18,7 @@ public class SanityTest extends UIBaseTest {
 
 		browserHelper.open("http://www.guru99.com/selenium-tutorial.html");
 		String title = browserHelper.getTitle();
-		Assert.assertTrue(title.contains("Free Selenium Tutorials"));
+		Assert.assertTrue(title.contains("Selenium Tutorial for Beginners"));
 		System.out.println("SANITYTEST1");
 		System.out.println(SessionManager.getDriver().toString());
 	}
