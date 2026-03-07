@@ -45,7 +45,7 @@ public class SessionManager {
 		case "firefox":
 
 			if (OSNAME.contains("windows")) {
-				System.setProperty("webdriver.gecko.driver", path + "/drivers/windows32/geckodriver.exe");
+				System.setProperty("webdriver.gecko.driver", path + "/drivers/windows64/geckodriver.exe");
 			} else {
 				System.setProperty("webdriver.gecko.driver", path + "/drivers/linux32/geckodriver");
 			}
@@ -62,7 +62,7 @@ public class SessionManager {
 		case "chrome":
 			
 			if (OSNAME.contains("windows")) {
-				System.setProperty("webdriver.chrome.driver", path + "/drivers/windows32/chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", path + "/drivers/windows64/chromedriver.exe");
 			} else {
 				System.setProperty("webdriver.chrome.driver", path + "/drivers/linux32/chromedriver");	
 			}

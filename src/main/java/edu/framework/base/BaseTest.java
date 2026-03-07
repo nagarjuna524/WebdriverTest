@@ -13,7 +13,7 @@ import org.testng.annotations.Listeners;
 public class BaseTest {
 
 	@BeforeSuite
-	public void manditoryBeforeSuite(ITestContext context) {
+	public void manditoryBeforeSuite() {
 		System.out.println("Before Suite");
 	}
 
@@ -38,7 +38,7 @@ public class BaseTest {
 	}
 
 	@AfterSuite(alwaysRun = true)
-	public void manditoryAfterSuite(ITestContext context) {
+	public void manditoryAfterSuite() {
 		System.out.println("After Suite");
 	}
 }
